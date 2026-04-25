@@ -1,0 +1,217 @@
+[
+  {
+    "slug": "px-to-rem",
+    "title": "PX to REM Converter",
+    "input_unit": "px",
+    "output_unit": "rem",
+    "formula_js": "(input / 16)",
+    "seo_description": "Convert pixels to rem units instantly. Free online px to rem calculator for CSS.",
+    "how_it_works": "Divide the pixel value by 16 (the browser default root font size) to get rem. Change your root font-size? Just divide by that value instead.",
+    "examples": ["<code>16px</code> = 1rem", "<code>32px</code> = 2rem", "<code>10px</code> = 0.625rem"]
+  },
+  {
+    "slug": "rem-to-px",
+    "title": "REM to PX Converter",
+    "input_unit": "rem",
+    "output_unit": "px",
+    "formula_js": "(input * 16)",
+    "seo_description": "Convert rem to pixels instantly. Essential CSS unit converter for web developers.",
+    "how_it_works": "Multiply the rem value by 16 (the browser default root font size) to get pixels.",
+    "examples": ["<code>1rem</code> = 16px", "<code>2rem</code> = 32px", "<code>1.5rem</code> = 24px"]
+  },
+  {
+    "slug": "unix-timestamp",
+    "title": "Unix Timestamp Converter",
+    "inputs": [
+      {"id": "tsInput", "label": "Unix Timestamp (seconds)", "type": "number", "placeholder": "e.g. 1745592000"}
+    ],
+    "output_unit": "",
+    "formula_js": "(function() { const ts = parseFloat($('tsInput').value); if (isNaN(ts)) return '—'; const d = new Date(ts * 1000); return { primary: d.toLocaleString('en-GB', { timeZone: 'UTC', dateStyle: 'full', timeStyle: 'medium' }) + ' UTC', sub: 'Local: ' + d.toLocaleString('en-GB', { dateStyle: 'full', timeStyle: 'medium' }) }; })()",
+    "seo_description": "Convert Unix timestamp to human-readable date and time. Free online epoch converter.",
+    "how_it_works": "Unix timestamps count seconds since January 1, 1970 (UTC). Enter any timestamp to see both UTC and local time.",
+    "examples": ["<code>0</code> = Thu, 01 Jan 1970 00:00:00 UTC", "<code>1745592000</code> = today's date", "<code>1609459200</code> = 01 Jan 2021 00:00:00 UTC"]
+  },
+  {
+    "slug": "percentage-calculator",
+    "title": "Percentage Calculator",
+    "inputs": [
+      {"id": "percPct", "label": "Percentage (%)", "type": "number", "placeholder": "e.g. 20"},
+      {"id": "percOf", "label": "Of (total)", "type": "number", "placeholder": "e.g. 200"}
+    ],
+    "output_unit": "",
+    "formula_js": "(function() { const pct = parseFloat($('percPct').value); const total = parseFloat($('percOf').value); if (isNaN(pct) || isNaN(total)) return '—'; const result = (pct / 100) * total; return { primary: result.toFixed(2), sub: pct + '% of ' + total + ' = ' + result.toFixed(2) }; })()",
+    "seo_description": "Calculate percentages instantly. Free online percentage calculator — what is X% of Y?",
+    "how_it_works": "Enter a percentage and a total. The calculator tells you what X% of Y is. For example, 20% of 200 = 40.",
+    "examples": ["<code>20%</code> of <code>200</code> = 40", "<code>15%</code> of <code>80</code> = 12", "<code>8%</code> of <code>50</code> = 4"]
+  },
+  {
+    "slug": "bytes-to-kb",
+    "title": "Bytes to Kilobytes Converter",
+    "input_unit": "bytes",
+    "output_unit": "KB",
+    "formula_js": "(input / 1024)",
+    "seo_description": "Convert bytes to kilobytes (KB) instantly. Free file size unit converter.",
+    "how_it_works": "Divide bytes by 1024 to get kilobytes. 1 KB = 1024 bytes.",
+    "examples": ["<code>1024</code> bytes = 1 KB", "<code>1048576</code> bytes = 1024 KB = 1 MB"]
+  },
+  {
+    "slug": "kb-to-mb",
+    "title": "Kilobytes to Megabytes Converter",
+    "input_unit": "KB",
+    "output_unit": "MB",
+    "formula_js": "(input / 1024)",
+    "seo_description": "Convert kilobytes to megabytes instantly. Free file size calculator.",
+    "how_it_works": "Divide kilobytes by 1024 to get megabytes. 1 MB = 1024 KB.",
+    "examples": ["<code>1024</code> KB = 1 MB", "<code>5120</code> KB = 5 MB"]
+  },
+  {
+    "slug": "mb-to-gb",
+    "title": "Megabytes to Gigabytes Converter",
+    "input_unit": "MB",
+    "output_unit": "GB",
+    "formula_js": "(input / 1024)",
+    "seo_description": "Convert megabytes to gigabytes instantly. Free storage unit calculator.",
+    "how_it_works": "Divide megabytes by 1024 to get gigabytes. 1 GB = 1024 MB.",
+    "examples": ["<code>1024</code> MB = 1 GB", "<code>8192</code> MB = 8 GB"]
+  },
+  {
+    "slug": "celsius-to-fahrenheit",
+    "title": "Celsius to Fahrenheit Converter",
+    "input_unit": "°C",
+    "output_unit": "°F",
+    "formula_js": "((input * 9/5) + 32)",
+    "seo_description": "Convert Celsius to Fahrenheit instantly. Free temperature unit converter.",
+    "how_it_works": "Multiply by 9/5 then add 32. So 100°C = (100 × 1.8) + 32 = 212°F.",
+    "examples": ["<code>0°C</code> = 32°F (freezing)", "<code>25°C</code> = 77°F (room temp)", "<code>100°C</code> = 212°F (boiling)"]
+  },
+  {
+    "slug": "fahrenheit-to-celsius",
+    "title": "Fahrenheit to Celsius Converter",
+    "input_unit": "°F",
+    "output_unit": "°C",
+    "formula_js": "((input - 32) * 5/9)",
+    "seo_description": "Convert Fahrenheit to Celsius instantly. Free temperature calculator.",
+    "how_it_works": "Subtract 32 then multiply by 5/9. So 212°F = (212 − 32) × 5/9 = 100°C.",
+    "examples": ["<code>32°F</code> = 0°C (freezing)", "<code>77°F</code> = 25°C (room temp)", "<code>212°F</code> = 100°C (boiling)"]
+  },
+  {
+    "slug": "km-to-miles",
+    "title": "Kilometres to Miles Converter",
+    "input_unit": "km",
+    "output_unit": "miles",
+    "formula_js": "(input * 0.621371)",
+    "seo_description": "Convert kilometres to miles instantly. Free distance unit converter.",
+    "how_it_works": "Multiply kilometres by 0.621371 to get miles. 1 km = 0.621371 miles.",
+    "examples": ["<code>1 km</code> = 0.62 miles", "<code>5 km</code> = 3.11 miles", "<code>42.195 km</code> = 26.22 miles (marathon)"]
+  },
+  {
+    "slug": "miles-to-km",
+    "title": "Miles to Kilometres Converter",
+    "input_unit": "miles",
+    "output_unit": "km",
+    "formula_js": "(input * 1.60934)",
+    "seo_description": "Convert miles to kilometres instantly. Free distance calculator.",
+    "how_it_works": "Multiply miles by 1.60934 to get kilometres. 1 mile = 1.60934 km.",
+    "examples": ["<code>1 mile</code> = 1.61 km", "<code>10 miles</code> = 16.09 km", "<code>26.22 miles</code> = 42.20 km (marathon)"]
+  },
+  {
+    "slug": "kg-to-lbs",
+    "title": "Kilograms to Pounds Converter",
+    "input_unit": "kg",
+    "output_unit": "lbs",
+    "formula_js": "(input * 2.20462)",
+    "seo_description": "Convert kilograms to pounds instantly. Free weight unit converter.",
+    "how_it_works": "Multiply kilograms by 2.20462 to get pounds. 1 kg = 2.20462 lbs.",
+    "examples": ["<code>1 kg</code> = 2.20 lbs", "<code>75 kg</code> = 165.35 lbs (avg adult)", "<code>100 kg</code> = 220.46 lbs"]
+  },
+  {
+    "slug": "lbs-to-kg",
+    "title": "Pounds to Kilograms Converter",
+    "input_unit": "lbs",
+    "output_unit": "kg",
+    "formula_js": "(input / 2.20462)",
+    "seo_description": "Convert pounds to kilograms instantly. Free weight calculator.",
+    "how_it_works": "Divide pounds by 2.20462 to get kilograms. 1 lb = 0.453592 kg.",
+    "examples": ["<code>1 lb</code> = 0.45 kg", "<code>150 lbs</code> = 68.04 kg", "<code>200 lbs</code> = 90.72 kg"]
+  },
+  {
+    "slug": "gbp-to-usd",
+    "title": "GBP to USD Converter",
+    "inputs": [
+      {"id": "gbpAmount", "label": "Amount in GBP (£)", "type": "number", "placeholder": "e.g. 100"},
+      {"id": "gbpRate", "label": "Exchange rate (GBP/USD)", "type": "number", "placeholder": "e.g. 1.27"}
+    ],
+    "output_unit": "",
+    "formula_js": "(function() { const gbp = parseFloat($('gbpAmount').value); const rate = parseFloat($('gbpRate').value) || 1.27; if (isNaN(gbp)) return '—'; const usd = gbp * rate; return { primary: 'USD $' + usd.toFixed(2), sub: '£' + gbp.toFixed(2) + ' × ' + rate.toFixed(4) + ' = $' + usd.toFixed(2) }; })()",
+    "seo_description": "Convert British pounds to US dollars. Free GBP to USD currency converter with adjustable rate.",
+    "how_it_works": "Multiplies the GBP amount by the exchange rate. Default rate is 1.27. Adjust the rate field for live rates from your bank or broker.",
+    "examples": ["<code>£100</code> at 1.27 = $127.00", "<code>£500</code> at 1.30 = $650.00", "<code>£50</code> at 1.25 = $62.50"]
+  },
+  {
+    "slug": "hex-to-decimal",
+    "title": "Hexadecimal to Decimal Converter",
+    "input_unit": "hex value",
+    "output_unit": "decimal",
+    "formula_js": "parseInt(String(input).replace(/^0x/i,''), 16)",
+    "seo_description": "Convert hexadecimal to decimal instantly. Free hex to dec calculator for developers.",
+    "how_it_works": "Hexadecimal (base 16) uses digits 0-9 and letters A-F. parseInt converts it to base 10.",
+    "examples": ["<code>FF</code> = 255", "<code>A</code> = 10", "<code>100</code> = 256", "<code>FFF</code> = 4095"]
+  },
+  {
+    "slug": "cm-to-inches",
+    "title": "Centimetres to Inches Converter",
+    "input_unit": "cm",
+    "output_unit": "inches",
+    "formula_js": "(input / 2.54)",
+    "seo_description": "Convert centimetres to inches instantly. Free length unit converter.",
+    "how_it_works": "Divide centimetres by 2.54 to get inches. 1 inch = 2.54 cm exactly.",
+    "examples": ["<code>2.54 cm</code> = 1 inch", "<code>30 cm</code> = 11.81 inches (ruler)", "<code>100 cm</code> = 39.37 inches"]
+  },
+  {
+    "slug": "inches-to-cm",
+    "title": "Inches to Centimetres Converter",
+    "input_unit": "inches",
+    "output_unit": "cm",
+    "formula_js": "(input * 2.54)",
+    "seo_description": "Convert inches to centimetres instantly. Free length calculator.",
+    "how_it_works": "Multiply inches by 2.54 to get centimetres. 1 inch = 2.54 cm exactly.",
+    "examples": ["<code>1 inch</code> = 2.54 cm", "<code>12 inches</code> = 30.48 cm (1 foot)", "<code>27 inches</code> = 68.58 cm (monitor)"]
+  },
+  {
+    "slug": "vw-to-px",
+    "title": "VW to PX Converter",
+    "inputs": [
+      {"id": "vwInput", "label": "VW value", "type": "number", "placeholder": "e.g. 50"},
+      {"id": "vpInput", "label": "Viewport width (px)", "type": "number", "placeholder": "e.g. 1440"}
+    ],
+    "output_unit": "",
+    "formula_js": "(function() { const vw = parseFloat($('vwInput').value); const vp = parseFloat($('vpInput').value) || 1440; if (isNaN(vw)) return '—'; return { primary: (vw / 100 * vp).toFixed(2) + ' px', sub: vw + 'vw at ' + vp + 'px viewport' }; })()",
+    "seo_description": "Convert CSS vw units to pixels. Enter your viewport width for accurate results.",
+    "how_it_works": "1vw = 1% of the viewport width. Adjust the viewport field to match your target screen size.",
+    "examples": ["<code>50vw</code> at 1440px = 720px", "<code>100vw</code> at 375px = 375px (mobile)"]
+  },
+  {
+    "slug": "bmi-calculator",
+    "title": "BMI Calculator",
+    "inputs": [
+      {"id": "bmiWeight", "label": "Weight (kg)", "type": "number", "placeholder": "e.g. 75"},
+      {"id": "bmiHeight", "label": "Height (cm)", "type": "number", "placeholder": "e.g. 175"}
+    ],
+    "output_unit": "",
+    "custom_styles": "",
+    "formula_js": "(function() { const weight = parseFloat($('bmiWeight').value); const heightCm = parseFloat($('bmiHeight').value); if (isNaN(weight) || isNaN(heightCm) || weight <= 0 || heightCm <= 0) return '—'; const heightM = heightCm / 100; const bmi = weight / (heightM * heightM); let cat = ''; let col = ''; if (bmi < 18.5) { cat = 'Underweight'; col = '#dbeafe'; } else if (bmi < 25) { cat = 'Normal weight'; col = '#4ade80'; } else if (bmi < 30) { cat = 'Overweight'; col = '#fbbf24'; } else { cat = 'Obese'; col = '#ef4444'; } return { primary: bmi.toFixed(1) + ' kg/m²', sub: 'Category: ' + cat }; })()",
+    "seo_description": "Calculate your Body Mass Index (BMI). Free online BMI calculator using metric units.",
+    "how_it_works": "BMI = weight (kg) ÷ height² (m²). A BMI of 18.5–24.9 is considered healthy for adults.",
+    "examples": ["75 kg / 175 cm → BMI 24.5 (Normal)", "90 kg / 180 cm → BMI 27.8 (Overweight)", "65 kg / 170 cm → BMI 22.5 (Normal)"]
+  },
+  {
+    "slug": "minutes-to-hours",
+    "title": "Minutes to Hours Converter",
+    "input_unit": "minutes",
+    "output_unit": "hours",
+    "formula_js": "(input / 60)",
+    "seo_description": "Convert minutes to hours instantly. Free time unit calculator.",
+    "how_it_works": "Divide minutes by 60 to get hours. For example, 90 minutes = 1.5 hours.",
+    "examples": ["<code>60</code> minutes = 1 hour", "<code>90</code> minutes = 1.5 hours", "<code>150</code> minutes = 2.5 hours"]
+  }
+]

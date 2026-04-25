@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inches to Centimetres Converter | Free Online Tool</title>
+    <meta name="description" content="Convert inches to centimetres instantly. Free length calculator.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#4f46e5">
+    <link rel="canonical" href="https://utilitytools.pages.dev/inches-to-cm">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%234f46e5'/><text x='16' y='23' font-size='20' text-anchor='middle' fill='white' font-family='system-ui'>⚡</text></svg>">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Inches to Centimetres Converter",
+        "description": "Convert inches to centimetres instantly. Free length calculator.",
+        "applicationCategory": "Utility",
+        "operatingSystem": "Web",
+        "offers": {"@type": "Offer", "price": "0"}
+    }
+    </script>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        :root {
+            --primary: #4f46e5;
+            --primary-hover: #3730a3;
+            --bg: #fafafa;
+            --card-bg: #fff;
+            --card-border: #e0e0e0;
+            --text: #222;
+            --text-muted: #555;
+            --result-bg: #f0f0ff;
+            --error-bg: #fef2f2;
+            --error-color: #dc2626;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --primary: #6366f1;
+                --primary-hover: #818cf8;
+                --bg: #0f0f11;
+                --card-bg: #1a1a1e;
+                --card-border: #2a2a30;
+                --text: #e4e4e7;
+                --text-muted: #a1a1aa;
+                --result-bg: #1e1b4b;
+                --error-bg: #2a1215;
+            }
+            input[type=number] {
+                background: #27272a;
+                color: #e4e4e7;
+                border-color: #3f3f46;
+            }
+            input[type=number]:focus { border-color: var(--primary); }
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            max-width: 640px;
+            margin: 0 auto;
+            padding: 1.5rem 1rem;
+            color: var(--text);
+            background: var(--bg);
+        }
+        h1 { font-size: 1.5rem; margin-bottom: 0.25rem; line-height: 1.3; }
+        p.tagline { color: var(--text-muted); margin-top: 0; margin-bottom: 1.5rem; font-size: 0.9rem; }
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .input-group { margin-bottom: 0.8rem; }
+        .input-group:last-of-type { margin-bottom: 0; }
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+        }
+        input[type=number] {
+            width: 100%;
+            padding: 0.7rem 0.8rem;
+            font-size: 1.1rem;
+            border: 1px solid var(--card-border);
+            border-radius: 8px;
+            outline: none;
+            background: transparent;
+            color: var(--text);
+            transition: border-color 0.15s;
+        }
+        input[type=number]:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(79,70,229,0.12); }
+        select {
+            width: 100%;
+            padding: 0.7rem 0.8rem;
+            font-size: 1rem;
+            border: 1px solid var(--card-border);
+            border-radius: 8px;
+            outline: none;
+            background: var(--card-bg);
+            color: var(--text);
+            cursor: pointer;
+        }
+        select:focus { border-color: var(--primary); }
+        .btn-row {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        button {
+            flex: 1;
+            padding: 0.75rem 1rem;
+            background: var(--primary);
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.15s;
+        }
+        button:hover { background: var(--primary-hover); }
+        button.secondary {
+            background: transparent;
+            color: var(--text-muted);
+            border: 1px solid var(--card-border);
+        }
+        button.secondary:hover { background: var(--card-bg); color: var(--text); }
+        .result {
+            margin-top: 1rem;
+            padding: 1rem;
+            background: var(--result-bg);
+            border-radius: 8px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-align: center;
+            min-height: 3rem;
+            word-break: break-word;
+            transition: opacity 0.15s;
+        }
+        .result.error {
+            background: var(--error-bg);
+            color: var(--error-color);
+            font-weight: 400;
+            font-size: 0.95rem;
+        }
+        .result .sub {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 400;
+            color: var(--text-muted);
+            margin-top: 0.3rem;
+        }
+        
+        .ad-wrapper {
+            margin: 1.5rem 0;
+            min-height: 1px;
+        }
+        footer {
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--card-border);
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            text-align: center;
+        }
+        .examples {
+            margin-top: 0.8rem;
+            padding: 0.6rem 0.8rem;
+            background: var(--bg);
+            border-radius: 6px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+        .examples strong { color: var(--text); }
+        .examples code {
+            font-family: 'SF Mono', 'Fira Code', monospace;
+            background: var(--card-bg);
+            padding: 0.1rem 0.3rem;
+            border-radius: 3px;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Inches to Centimetres Converter</h1>
+    <p class="tagline">Convert inches to centimetres instantly. Free length calculator.</p>
+
+    <div class="card">
+                <div class="input-group">
+            <label for="inputValue">inches</label>
+            <input type="number" id="inputValue" placeholder="0" autofocus>
+        </div>
+        <div class="btn-row">
+            <button onclick="convert()" id="convertBtn">Convert</button>
+            <button class="secondary" onclick="resetForm()">Reset</button>
+        </div>
+        <div class="result" id="result">Enter a value to get started</div>
+    </div>
+
+    <div class="ad-wrapper"><!-- AdSense slot --></div>
+
+    <div class="card">
+        <h2 style="font-size:1rem;margin-top:0;margin-bottom:0.6rem">How it works</h2>
+        <p style="font-size:0.9rem;margin:0;color:var(--text-muted);line-height:1.5">Multiply inches by 2.54 to get centimetres. 1 inch = 2.54 cm exactly.</p>
+        
+        <div class="examples">
+            <strong>Examples:</strong>
+            <code>1 inch</code> = 2.54 cm
+            <code>12 inches</code> = 30.48 cm (1 foot)
+            <code>27 inches</code> = 68.58 cm (monitor)
+        </div>
+    </div>
+
+    <footer>
+        <span style="font-weight:600;color:var(--primary)">⚡ UtilityTools</span> &mdash; Free online tools. No signup required.
+    </footer>
+
+    
+    <script>
+        function $(id) { return document.getElementById(id); }
+
+        function convert() {
+            const resultEl = $('result');
+            resultEl.className = 'result';
+
+            try {
+                const result = (input * 2.54);
+
+                if (typeof result === 'object' && result !== null) {
+                    let html = '';
+                    if (result.primary !== undefined) html += result.primary;
+                    if (result.sub !== undefined) html += '<span class="sub">' + result.sub + '</span>';
+                    resultEl.innerHTML = html;
+                } else if (typeof result === 'number' && isFinite(result)) {
+                    const formatted = parseFloat(result.toFixed(4)).toString();
+                    resultEl.textContent = formatted + ' cm';
+                } else {
+                    resultEl.textContent = String(result);
+                }
+            } catch (e) {
+                resultEl.className = 'result error';
+                resultEl.textContent = 'Something went wrong. Check your input.';
+            }
+        }
+
+        function resetForm() {
+            const inputs = document.querySelectorAll('input[type=number], input[type=text], select');
+            inputs.forEach(function(el) { el.value = ''; });
+            const resultEl = $('result');
+            resultEl.className = 'result';
+            resultEl.textContent = 'Enter a value to get started';
+        }
+
+        // Enter key triggers convert
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') {
+                const active = document.activeElement;
+                if (active && active.tagName === 'INPUT') { convert(); }
+            }
+        });
+
+        
+    </script>
+</body>
+</html>
